@@ -1,17 +1,17 @@
 resource "aws_vpc" "networking" {
-  name        = "production-vpc"
+  name        = "development-vpc"
   cidr        = "10.1.0.0/16"
   subnet_size = "extra-large"
 }
 
 resource "aws_rds" {
-  name        = "production-databse"
+  name        = "development-databse"
   vpc_id      = aws_vpc.id
   server_size = "extra-large"
 }
 
 resource "aws_eks" "kubernetes" {
-  name         = "production-kubernetes"
+  name         = "development-kubernetes"
   vpc_id       = aws_vpc.id
   cluster_size = "extra-large"
 }

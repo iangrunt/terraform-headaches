@@ -24,3 +24,10 @@ module "eks-cluster" {
   vpc_id       = module.vpc.id
   cluster_size = "extra-large"
 }
+
+module "production-only" {
+  source = "../modules/special-infrastructure"
+
+  name        = "production-important"
+  qubit_count = 1024
+}

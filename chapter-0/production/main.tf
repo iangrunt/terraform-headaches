@@ -17,9 +17,12 @@ resource "aws_eks" "kubernetes" {
 }
 
 resource "aws_this" "that" {}
-
 resource "aws_the" "other" {}
-
 resource "aws_and" "another" {}
 
 // ...continued
+
+resource "project_x" "this" {}
+resource "project_x" "that" {}
+resource "project_x" "the_other" {}
+

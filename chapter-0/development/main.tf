@@ -17,4 +17,5 @@ resource "aws_eks" "kubernetes" {
 }
 
 resource "aws_this" "that" {}
+
 // ...continued

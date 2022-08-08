@@ -1,23 +1,20 @@
 resource "aws_vpc" "networking" {
   name        = "development-vpc"
-  cidr        = "10.1.0.0/16"
-  subnet_size = "extra-large"
+  cidr        = "10.2.0.0/16"
+  subnet_size = "small"
 }
 
 resource "aws_rds" "database" {
   name        = "development-databse"
   vpc_id      = aws_vpc.id
-  server_size = "extra-large"
+  server_size = "small"
 }
 
 resource "aws_eks" "kubernetes" {
   name         = "development-kubernetes"
   vpc_id       = aws_vpc.id
-  cluster_size = "extra-large"
+  cluster_size = "small"
 }
 
-// resource "aws_this" "that" {}
-// resource "aws_the" "other" {}
+resource "aws_this" "that" {}
 // ...continued
-// ...and continued
-// ...and continued...

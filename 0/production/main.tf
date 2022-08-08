@@ -16,8 +16,6 @@ resource "aws_eks" "kubernetes" {
   cluster_size = "extra-large"
 }
 
-// resource "aws_this" "that" {}
-// resource "aws_the" "other" {}
-// ...continued
+resource "aws_this" "that" {}
+resource "aws_the" "other" {}
 // ...and continued
-// ...and continued...

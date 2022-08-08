@@ -4,7 +4,7 @@ resource "aws_vpc" "networking" {
   subnet_size = "extra-large"
 }
 
-resource "aws_rds" {
+resource "aws_rds" "database" {
   name        = "production-databse"
   vpc_id      = aws_vpc.id
   server_size = "extra-large"
